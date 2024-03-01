@@ -1,0 +1,8 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: var(--primary-color);
+}
