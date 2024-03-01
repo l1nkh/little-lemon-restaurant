@@ -1,8 +1,24 @@
-.nav{
+/* Nav component specific styles */
+.nav {
     display: flex;
     justify-content: space-between;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: black;
+    min-height: var(--navbar-height);
+    margin: 0px var(--margin-s);
 }
 
-nav{
+.nav a,
+.nav a:hover {
+    color: inherit;
+}
+
+nav {
     background-color: var(--primary-color);
+}
+
+.brandLogo {
+    height: 128px;
+    width: auto;
 }

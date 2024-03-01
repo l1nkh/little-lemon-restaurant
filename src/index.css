@@ -14,5 +14,7 @@ code {
 
 :root {
   --primary-color: #FFE980;
+  --navbar-height: 160px;
+  --margin-s: 20px;
   /* Add more global variables as needed */
 }
