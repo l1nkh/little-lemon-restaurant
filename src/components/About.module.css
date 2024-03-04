@@ -1,21 +1,29 @@
-.menuSection {
+.aboutSection {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    background-color: var(--primary-color);
-    padding: 0;
-    margin: 0;
+    height: 100dvh;
+    justify-content: center;
+    font-family: 'roboto', sans-serif;
+    margin: 0px 20px;
+    color: black;
+    gap: 120px;
 }
 
-.h1{
+.h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:80px 0px 40px 0px;
+    margin: 0px 0px 40px 0px;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    color: black;
+}
+
+.h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 40px 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .row {
@@ -23,26 +31,26 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
-  }
+}
 
 .item {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 8px;
-    width: calc(33.33% - 40px);
-    height: 364px;
+    width: 320px;
+    height: 256px;
     margin: 10px 20px;
 }
 
-.item img{
+.item img {
     border-radius: 8px;
     height: 90%;
     max-width: inherit;
     object-fit: cover;
 }
 
-.item p{
+.item p {
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     color: black;

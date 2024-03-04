@@ -1,0 +1,8 @@
+.PressSection{
+  height: 100vh;
+}
+.outlineBtn{
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 16px;
+}
