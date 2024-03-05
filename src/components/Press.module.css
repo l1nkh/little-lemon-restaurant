@@ -1,7 +1,25 @@
-.PressSection{
+.pressSection {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-.outlineBtn{
+
+.quoteSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: 'roboto slab', serif;
+}
+
+.quote{
+  font-style: italic;
+}
+
+.outlineBtn {
   border: 2px solid black;
   border-radius: 3px;
   padding: 16px;

@@ -55,7 +55,7 @@ function Nav() {
                     </ul>
                     <div className="nav-center">
                         <a href='#'>
-                            <img src="lemonlogo.png" alt="Restaurant Logo" className={NavCSS.brandLogo} />
+                            <img className="brandLogo"src="lemonlogo.png" alt="Restaurant Logo" />
                         </a>
                     </div>
                     <ul className={`nav nav-underline ${NavCSS.navRight}`}>

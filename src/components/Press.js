@@ -19,16 +19,11 @@ function PressReviewSlider() {
     setIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
   };
 
-  const images = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150"
-  ];
 
   return (
-    <section className={PressCSS.PressSection}>
-        <div className={PressCSS.QuoteSection}>
-            <h3>"It deserves all the praise"</h3>
+    <section className={PressCSS.pressSection}>
+        <div className={PressCSS.quoteSection}>
+            <h3 className={PressCSS.quote}>"It deserves all the praise"</h3>
             <button className={PressCSS.outlineBtn}>View More Press</button>
         </div>
         <Gallery />
