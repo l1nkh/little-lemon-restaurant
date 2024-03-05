@@ -5,21 +5,21 @@ function About() {
     const locations = [
         {
             key: 1,
-            name: 'location1',
+            name: 'Lisbon',
             description: 'desc1',
-            imgSrc: 'https://via.placeholder.com/150',
+            imgSrc: 'https://images.unsplash.com/photo-1693603020248-1a6f564443ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         },
         {
             key: 2,
-            name: 'location2',
+            name: 'Florence',
             description: 'desc2',
-            imgSrc: 'https://via.placeholder.com/150',
+            imgSrc: 'https://images.unsplash.com/photo-1663323744937-421f66782e03?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         },
         {
             key: 3,
-            name: 'location3',
+            name: 'Mykonos',
             description: 'desc3',
-            imgSrc: 'https://via.placeholder.com/150',
+            imgSrc: 'https://images.unsplash.com/photo-1602941375256-e21ec752434f?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         },
     ];
 

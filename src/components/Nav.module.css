@@ -22,3 +22,7 @@ nav {
     height: 128px;
     width: auto;
 }
+
+.clickable{
+    cursor: pointer;
+}

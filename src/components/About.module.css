@@ -9,6 +9,11 @@
     gap: 120px;
 }
 
+.p{
+    width: 1340px;
+    text-align: center;
+}
+
 .h1 {
     display: flex;
     justify-content: center;

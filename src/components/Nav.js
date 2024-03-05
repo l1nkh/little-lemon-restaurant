@@ -1,27 +1,28 @@
 import React from "react";
 import NavCSS from "./Nav.module.css"
+import { Link } from 'react-scroll';
 
 function Nav() {
     const leftSideLinks = [
         {
             id: 1,
             name: 'Home',
-            href: '#'
+            to: 'header'
         },
         {
             id: 2,
-            name: 'Menu',
-            href: '#'
+            name: 'About',
+            to: 'about'
         },
         {
             id: 3,
-            name: 'Press',
-            href: '#'
+            name: 'Menu',
+            to: 'menu'
         },
         {
             id: 4,
-            name: 'Contact',
-            href: '#'
+            name: 'Press',
+            to: 'press'
         },
     ];
 
@@ -29,16 +30,9 @@ function Nav() {
         {
             id: 1,
             name: 'Reservations',
-            href: '#'
-        },
-        {
-            id: 2,
-            name: 'Instagram',
-            href: '#',
-            src: ''
+            to: 'booktable'
         },
     ];
-
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
@@ -48,22 +42,22 @@ function Nav() {
             <div className={` ${NavCSS.nav} collape navbar-collapse`} id="navbarNav">
                 <ul className={`nav nav-underline ${NavCSS.navLeft}`}>
                         {leftSideLinks.map(page => (
-                            <li key={page.id} className="nav-item">
-                                <a className="nav-link" href={page.href}>{page.name}</a>
-                            </li>
+                            <li key={page.id} className={`nav-item ${NavCSS.clickable}`}>
+                            <Link className="nav-link" to={page.to} spy={true} smooth={true} duration={500}>{page.name}</Link>
+                        </li>
                         ))}
                     </ul>
                     <div className="nav-center">
                         <a href='#'>
-                            <img className="brandLogo"src="lemonlogo.png" alt="Restaurant Logo" />
+                            <img className={NavCSS.brandLogo}src="lemonlogo.png" alt="Restaurant Logo" />
                         </a>
                     </div>
                     <ul className={`nav nav-underline ${NavCSS.navRight}`}>
                         {rightSideLinks.map(page => (
-                            <li key={page.id} className="nav-item">
-                                <a className="nav-link" href={page.href}>
+                            <li key={page.id} className={`nav-item ${NavCSS.clickable}`}>
+                                <Link className="nav-link" to={page.to} spy={true} smooth={true} duration={500}>
                                     {page.name === 'Instagram' ? <img src={page.src} alt="Instagram Logo" /> : page.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -72,30 +66,5 @@ function Nav() {
         </nav>
     );
 }
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-<div class="container-fluid">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
 
 export default Nav;

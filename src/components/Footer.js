@@ -9,26 +9,17 @@ function Footer() {
             </a>
             <div className={FooterCSS.info}>
                 <div>
-                    Little Lemon Restaurant<br />
-                    Address, Address<br />
-                    City, Country<br />
-                    Phone Number
+                    Little Lemon Lisbon<br />
+                    Lisbon, Portugal
                 </div>
                 <div>
-                    Little Lemon Restaurant<br />
-                    Address, Address<br />
-                    City, Country<br />
-                    Phone Number
+                    Little Lemon Florence<br />
+                    Florence, Italy
                 </div>
                 <div>
-                    Little Lemon Restaurant<br />
-                    Address, Address<br />
-                    City, Country<br />
-                    Phone Number
+                    Little Lemon Mykonos<br />
+                    Mykonos, Greece
                 </div>
-                <a href='#'>
-                    <img src="lemonlogo.png" alt="Restaurant Logo" className={FooterCSS.brandLogo} />
-                </a>
             </div>
         </footer>
     )

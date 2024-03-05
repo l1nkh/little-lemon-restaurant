@@ -13,7 +13,7 @@ const BookTable = () => {
 
     const [errors, setErrors] = useState({});
     const [showPopup, setShowPopup] = useState(false);
-    
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -64,11 +64,6 @@ const BookTable = () => {
             valid = false;
         }
 
-        if (!formData.message.trim()) {
-            errors.message = 'Message is required';
-            valid = false;
-        }
-
         setErrors(errors);
         return valid;
     };
@@ -77,39 +72,47 @@ const BookTable = () => {
         <div className={BookTableCSS.reservations}>
             <h1 className={BookTableCSS.h1}>Reservations</h1>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input type="text" className="form-control" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} />
-                    {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
+                <div className="row mb-3">
+                    <div className="col">
+                        <label htmlFor="firstName" className="form-label">First Name*</label>
+                        <input type="text" className="form-control" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} />
+                        {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
+                    </div>
+                    <div className="col">
+                        <label htmlFor="lastName" className="form-label">Last Name*</label>
+                        <input type="text" className="form-control" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} />
+                        {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
+                    </div>
+                </div>
+                <div className="row mb-3">
+                    <div className="col">
+                        <label htmlFor="email" className="form-label">Email*</label>
+                        <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
+                        {errors.email && <span className="text-danger">{errors.email}</span>}
+                    </div>
+                    <div className="col">
+                        <label htmlFor="phoneNumber" className="form-label">Phone Number*</label>
+                        <input type="tel" className="form-control" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
+                        {errors.phoneNumber && <span className="text-danger">{errors.phoneNumber}</span>}
+                    </div>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input type="text" className="form-control" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} />
-                    {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
-                    {errors.email && <span className="text-danger">{errors.email}</span>}
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
-                    <input type="tel" className="form-control" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
-                    {errors.phoneNumber && <span className="text-danger">{errors.phoneNumber}</span>}
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="selectedOption" className="form-label">Options</label>
+                    <label htmlFor="selectedOption" className="form-label">Number Of People*</label>
                     <select className="form-select" id="selectedOption" name="selectedOption" value={formData.selectedOption} onChange={handleChange}>
-                        <option value="">Select an option</option>
-                        <option value="Option 1">Option 1</option>
-                        <option value="Option 2">Option 2</option>
-                        <option value="Option 3">Option 3</option>
+                        <option value="">-- Select the number of people --</option>
+                        <option value="Option 1">1</option>
+                        <option value="Option 2">2</option>
+                        <option value="Option 3">3</option>
+                        <option value="Option 3">4</option>
+                        <option value="Option 3">5</option>
+                        <option value="Option 3">6</option>
+                        <option value="Option 3">More</option>
                     </select>
                     {errors.selectedOption && <span className="text-danger">{errors.selectedOption}</span>}
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="message" className="form-label">Message</label>
-                    <textarea className="form-control" id="message" name="message" value={formData.message} onChange={handleChange}></textarea>
+                    <label htmlFor="message" className="form-label">Special Requests</label>
+                    <textarea className="form-control" id="message" name="message" value={formData.message} placeholder="(Optional)" onChange={handleChange}></textarea>
                     {errors.message && <span className="text-danger">{errors.message}</span>}
                 </div>
                 <button type="submit" className={`btn ${BookTableCSS.btnPrimary}`}>Submit</button>
@@ -124,7 +127,7 @@ const BookTable = () => {
                                 <button type="button" className="btn-close" onClick={() => setShowPopup(false)} aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
-                                <p>Your form has been submitted successfully!</p>
+                                <p>Your table has been booked successfully!</p>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className={`btn ${BookTableCSS.btnPrimary}`} onClick={() => setShowPopup(false)}>Close</button>
